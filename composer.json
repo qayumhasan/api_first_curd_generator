@@ -18,7 +18,8 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^10.1",
-        "spatie/laravel-ignition": "^2.0"
+        "spatie/laravel-ignition": "^2.0",
+        "qayum/crud-generator":"*"
     },
     "autoload": {
         "psr-4": {
@@ -29,7 +30,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Qayum\\CrudGenerator\\": "api-first-crud-package/src"
         }
     },
     "scripts": {
@@ -52,6 +54,15 @@
             "dont-discover": []
         }
     },
+    "repositories": [
+        {
+            "type" : "path",
+            "url" : "./api-first-crud-package",
+            "options" : {
+                "symlink" : true
+            }
+        }
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

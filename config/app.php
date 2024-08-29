@@ -159,7 +159,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Qayum\CrudGenerator\Providers\CrudGeneratorServiceProvider::class,
         /*
          * Application Service Providers...
          */

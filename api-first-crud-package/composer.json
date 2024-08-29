@@ -1,0 +1,36 @@
+{
+    "name": "qayum/crud-generator",
+    "description": "Generates a complete curd operation",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Qayum\\CrudGenerator\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.44"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Qayum\\CrudGenerator\\Providers\\CrudGeneratorServiceProvider"
+            ],
+            "aliases": {
+                "Debugbar": "Qayum\\CrudGenerator\\Providers\\Facade"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "qayumhasan",
+            "email": "dev.qayumhasan@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
