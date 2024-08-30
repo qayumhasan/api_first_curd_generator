@@ -19,3 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('newtests', App\Http\Controllers\Api\NewTestController::class);
+Route::apiResource('newtestcruds', App\Http\Controllers\Api\NewTestCrudController::class);
+Route::apiResource('hellocurds', App\Http\Controllers\Api\HelloCurdController::class);

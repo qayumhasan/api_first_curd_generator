@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 class CrudGenerateCommand extends Command
 {
-    protected $signature = 'crud:generate {name}';
+    protected $signature = 'make:crud {name}';
     protected $description = 'Generate CRUD operations';
 
     public function handle()
