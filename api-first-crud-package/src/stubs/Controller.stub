@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use App\Models\{{modelName}};
+use App\Http\Requests\Store{{modelName}}Request;
+use App\Http\Requests\Update{{modelName}}Request;
+use Illuminate\Http\Response;
+
+class {{modelName}}Controller extends Controller
+{
+    public function index()
+    {
+        $items = {{modelName}}::all();
+        return response()->json($items);
+    }
+
+    public function store(Store{{modelName}}Request $request)
+    {
+        $item = {{modelName}}::create($request->validated());
+        return response()->json($item,Response::HTTP_CREATED);
+    }
+
+    public function show({{modelName}} ${{modelName}})
+    {
+        return response()->json(${{modelName}});
+    }
+
+    public function update(Update{{modelName}}Request $request, {{modelName}} ${{modelName}})
+    {
+        $item = ${{modelName}}->update($request->validated());
+        return response()->json($item);
+    }
+
+    public function destroy({{modelName}} ${{modelName}})
+    {
+        ${{modelName}}->delete();
+        return response()->json(null, Response::HTTP_NO_CONTENT);
+    }
+}
